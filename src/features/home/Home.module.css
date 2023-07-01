@@ -1,0 +1,87 @@
+/* .logo {
+  padding: 1rem 3rem;
+  font-family: "Princess Sofia", cursive;
+  font-size: 6rem;
+  color: var(--primary-color);
+} */
+
+.hero {
+  width: 100%;
+  height: 56vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.villaOrt {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  font-family: "Princess Sofia", cursive;
+  font-size: 12rem;
+  top: 10%;
+  right: 10%;
+  padding: 1.2rem;
+}
+
+@media screen and (max-width: 680px) {
+  .villaOrt {
+    font-size: 6rem;
+  }
+}
+
+.textWrapper {
+  color: white;
+  font-size: 7vw;
+  font-family: "Ysabeau Infant";
+}
+
+.weatherInfo {
+  display: flex;
+  gap: 2vw;
+  position: absolute;
+  z-index: 1;
+  top: 35vw;
+  left: 5%;
+}
+
+.superText {
+  font-size: 3vw;
+}
+
+.icon {
+  font-size: 6vw;
+  vertical-align: -1vw;
+  padding-left: 1vw;
+}
+
+.location {
+  padding-top: 2vw;
+  font-size: 3vw;
+  line-height: 1;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 130%;
+  position: absolute;
+  animation: slider 45s infinite linear;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(11%);
+  }
+  50% {
+    transform: translateX(-11%);
+  }
+  100% {
+    transform: translateX(11%);
+  }
+}

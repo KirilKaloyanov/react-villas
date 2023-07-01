@@ -1,4 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Ysabeau+Infant:ital,wght@0,1;0,400;0,700;0,1000;1,1&display=swap");
+
 :root {
+  height: 200vh;
+  font-size: 62.5%;
+  --primary-color: rgb(127, 63, 45);
+  --secondary-color: rgb(143, 72, 52);
+  --white-color: rgb(255, 255, 255);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+    format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  /* font-size: 124px; */
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  --webkit-font-feature-settings: "liga";
+  --webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  /* background-color: var(--primary-color); */
+}
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +105,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
