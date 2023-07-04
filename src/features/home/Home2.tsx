@@ -7,6 +7,7 @@ interface Iinfo {
   temp: string;
   cloud: number;
   rain: number;
+  is_day: number;
 }
 
 interface Iweather {
@@ -22,6 +23,7 @@ function Home() {
       temp: "",
       cloud: 0,
       rain: 0,
+      is_day: 0,
     },
     error: null,
   });
@@ -37,6 +39,7 @@ function Home() {
             temp: data.current.feelslike_c,
             cloud: data.current.cloud,
             rain: data.current.precip_mm,
+            is_day: data.current.is_day,
           };
           return {
             ...oldState,
@@ -53,12 +56,13 @@ function Home() {
       );
   }, []);
 
-  console.log(weather);
+  // console.log(weather.info);
 
   function weatherIcon() {
     if (weather.info.rain >= 1) return "cloudy_snowing";
     if (weather.info.cloud > 50) return "wb_cloudy";
-    return "sunny";
+    if (weather.info.is_day > 0) return "sunny";
+    return "nights_stay";
   }
 
   return (
