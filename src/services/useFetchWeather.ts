@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-const BASE_URL = "http://api.weatherapi.com/v1/";
+const BASE_URL = "https://api.weatherapi.com/v1/";
 const API_KEY = "49ff9d66da0d49aea6a91332230107";
 const LOCATION = "41.962910,23.730058";
 
