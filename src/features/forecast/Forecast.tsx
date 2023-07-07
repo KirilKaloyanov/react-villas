@@ -13,7 +13,7 @@ export default function Forecast() {
     <>
       <div style={{ fontSize: "3rem" }}>
         {data.forecast.forecastday.map((i) => (
-          <li>
+          <li key={i.date_epoch}>
             {formatDate(i.date_epoch)} - {i.day.maxtemp_c}&deg;C -{" "}
             {i.day.condition.text}
           </li>
