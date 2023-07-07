@@ -1,10 +1,3 @@
-/* .logo {
-  padding: 1rem 3rem;
-  font-family: "Princess Sofia", cursive;
-  font-size: 6rem;
-  color: var(--primary-color);
-} */
-
 .hero {
   width: 100%;
   height: 56vw;
@@ -29,13 +22,9 @@
   }
 }
 
-.textWrapper {
+.weatherInfo {
   color: white;
   font-size: 7vw;
-  font-family: "Ysabeau Infant";
-}
-
-.weatherInfo {
   display: flex;
   gap: 2vw;
   position: absolute;
@@ -44,19 +33,9 @@
   left: 5%;
 }
 
-.superText {
-  font-size: 3vw;
-}
-
-.icon {
-  font-size: 6vw;
-  vertical-align: -1vw;
-  padding-left: 1vw;
-}
-
 .location {
-  padding-top: 2vw;
   font-size: 3vw;
+  padding-top: 2vw;
   line-height: 1;
 }
 

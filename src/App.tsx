@@ -1,10 +1,12 @@
 import "./App.css";
-import Home from "./features/home/Home2.tsx";
+import Hero from "./features/home/hero/Hero.tsx";
+import Forecast from "./features/forecast/Forecast.tsx";
 
 function App() {
   return (
     <>
-      <Home />
+      <Hero />
+      <Forecast />
     </>
   );
 }

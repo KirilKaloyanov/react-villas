@@ -2,6 +2,7 @@
 
 :root {
   height: 200vh;
+  font-family: "Ysabeau Infant", sans-serif;
   font-size: 62.5%;
   --primary-color: rgb(127, 63, 45);
   --secondary-color: rgb(143, 72, 52);
@@ -20,7 +21,6 @@
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  /* font-size: 124px; */
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
