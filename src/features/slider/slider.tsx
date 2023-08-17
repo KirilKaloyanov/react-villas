@@ -6,7 +6,7 @@ import view3 from "../../assets/img/bedroomView.jpg";
 import s from "./slider.module.css";
 
 export default function Slider() {
-  const [offset, setOffset] = useState("0px");
+  const [offset, setOffset] = useState("0");
 
   const divStyle = {
     transform: `translateX(${offset})`,
@@ -15,9 +15,9 @@ export default function Slider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (offset == "0px") setOffset("-1422px");
-      if (offset == "-1422px") setOffset("-2844px");
-      if (offset == "-2844px") setOffset("0px");
+      if (offset == "0") setOffset("-90vw");
+      if (offset == "-90vw") setOffset("-180vw");
+      if (offset == "-180vw") setOffset("0");
     }, 4000);
 
     return () => {
@@ -28,9 +28,9 @@ export default function Slider() {
   return (
     <div className={s.background}>
       <div className={s.carousel}>
-        <img src={view1} style={divStyle} />
-        <img src={view2} style={divStyle} />
-        <img src={view3} style={divStyle} />
+        <img src={view1} className={s.image} style={divStyle} />
+        <img src={view2} className={s.image} style={divStyle} />
+        <img src={view3} className={s.image} style={divStyle} />
       </div>
     </div>
   );
