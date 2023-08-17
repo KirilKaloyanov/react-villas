@@ -28,5 +28,5 @@ export default function formatDate(time: number) {
     "декември",
   ];
 
-  return `${day} ${monthNames[month]} (${weekDayNames[weekDay]})`;
+  return `${day} ${monthNames[month]} \n (${weekDayNames[weekDay]})`;
 }

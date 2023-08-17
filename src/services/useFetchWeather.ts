@@ -1,19 +1,24 @@
 import { useQuery } from "@tanstack/react-query";
 
-const BASE_URL = "https://api.weatherapi.com/v1/";
-const API_KEY = "49ff9d66da0d49aea6a91332230107";
-const LOCATION = "41.962910,23.730058";
+const BASE_URL = "https://dataservice.accuweather.com/";
+const API_KEY = "uomGNvwUKoLCnxYd7DVxucz978Nj56Bc";
+const LOCATION = 47068;
+const LANGUAGE = "bg";
 
 const endpoints = {
-  current: `current.json?key=${API_KEY}&q=${LOCATION}`,
-  forecast: `forecast.json?key=${API_KEY}&q=${LOCATION}&days=3&lang=bg`,
+  current: `currentconditions/v1/${LOCATION}/?apikey=${API_KEY}&language=${LANGUAGE}&details=true`,
+  //       "currentconditions/v1/47068?apikey=uomGNvwUKoLCnxYd7DVxucz978Nj56Bc&language=bg&details=true"
+  forecast: `forecasts/v1/daily/5day/${LOCATION}/?apikey=${API_KEY}&language=${LANGUAGE}&metric=true`,
+  //        "forecasts/v1/daily/5day/47068?apikey=uomGNvwUKoLCnxYd7DVxucz978Nj56Bc&language=bg&metric=true"
 };
 
 const useFetchWeather = <T>(key: string) => {
   return useQuery<T, Error>({
     queryKey: [key],
     queryFn: () => {
+      // return fetch(BASE_URL + endpoints[key as keyof typeof endpoints]).then(
       return fetch(BASE_URL + endpoints[key as keyof typeof endpoints]).then(
+        // ).then(
         (res) => {
           if (!res.ok) throw new Error("Request failed.");
           return res.json();

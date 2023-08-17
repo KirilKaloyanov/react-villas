@@ -1,25 +1,31 @@
 import useFetchWeather from "../../../../services/useFetchWeather.ts";
 
-import { Iweather } from "../../../../interfaces/weather/index.ts";
+import { IWeather } from "../../../../interfaces/weather/weather.ts";
 
 import s from "./Weather.module.css";
 
 export default function Weather() {
-  const { data, isLoading } = useFetchWeather<Iweather>("forecast");
+  const { data, isLoading } = useFetchWeather<IWeather[]>("current");
 
-  function weatherIcon(data: Iweather) {
-    if (data.current.precip_mm >= 1) return "cloudy_snowing";
-    if (data.current.cloud > 50) return "wb_cloudy";
-    if (data.current.is_day > 0) return "sunny";
+  let currentWeather: IWeather | null = null;
+
+  if (data) currentWeather = data[0];
+
+  function weatherIcon(data: IWeather) {
+    if (data.Precip1hr.Metric.Value >= 1) return "cloudy_snowing";
+    if (data.CloudCover > 50) return "wb_cloudy";
+    if (data.IsDayTime) return "sunny";
     return "nights_stay";
   }
 
-  if (!isLoading && data)
+  if (!isLoading && currentWeather)
     return (
       <div>
-        {data.current.temp_c}
+        {currentWeather.Temperature.Metric.Value}
         <sup className={s.superText}>&deg;C</sup>
-        <span className={"material-icons " + s.icon}>{weatherIcon(data)}</span>
+        <span className={"material-icons " + s.icon}>
+          {weatherIcon(currentWeather)}
+        </span>
       </div>
     );
 

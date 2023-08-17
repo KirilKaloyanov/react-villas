@@ -8,8 +8,8 @@
 .villaOrt {
   position: absolute;
   z-index: 1;
-  color: white;
-  font-family: "Princess Sofia", cursive;
+  color: var(--primary-color);
+  font-family: "Comforter", "Princess Sofia", cursive; /*Lobster, Pacifico, Amatic SC, Marck Script, Neicha, Bad Script, Reggae One, Comforter (Brush), Caveat */
   font-size: 12rem;
   top: 10%;
   right: 10%;
@@ -23,14 +23,14 @@
 }
 
 .weatherInfo {
-  color: white;
+  color: var(--light-color);
   font-size: 7vw;
   display: flex;
   gap: 2vw;
   position: absolute;
   z-index: 1;
   top: 35vw;
-  left: 5%;
+  left: 9vw;
 }
 
 .location {

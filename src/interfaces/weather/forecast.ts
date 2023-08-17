@@ -14,7 +14,7 @@ export interface IdetailedForecast {
 }
 
 export interface IdetailedForecastDay {
-  condition: { text: String };
+  condition: { text: String; icon: string; code: number };
   daily_will_it_rain: number;
   daily_will_it_snow: number;
   maxtemp_c: number;

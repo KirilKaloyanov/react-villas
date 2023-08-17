@@ -1,0 +1,18 @@
+.tiles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--dark-color);
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .tiles {
+    flex-direction: column;
+  }
+}
+
+.tile {
+  padding: 0 2rem;
+}

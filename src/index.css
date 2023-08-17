@@ -1,12 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Ysabeau+Infant:ital,wght@0,1;0,400;0,700;0,1000;1,1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Princess+Sofia&family=Ysabeau+Infant:ital,wght@0,1;0,400;0,700;0,1000;1,1&display=swap");
+
+/* https://colorhunt.co/palette/eee2deea906cb313122b2a4c */
 
 :root {
+  color: white;
+  background-color: var(--light-color);
   height: 200vh;
   font-family: "Ysabeau Infant", sans-serif;
   font-size: 62.5%;
-  --primary-color: rgb(127, 63, 45);
-  --secondary-color: rgb(143, 72, 52);
-  --white-color: rgb(255, 255, 255);
+  --primary-color: hsl(0, 82%, 39%);
+  --secondary-color: hsl(17, 44%, 65%); /* 17, 75%, 67% */
+  --light-color: hsl(15, 32%, 90%);
+  --dark-color: hsl(242, 29%, 23%);
 }
 
 @font-face {
@@ -35,6 +40,13 @@
 body {
   margin: 0;
   /* background-color: var(--primary-color); */
+}
+
+h3 {
+  font-size: 4rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 /* :root {
